@@ -8,6 +8,12 @@ public static class BookException
             : base($"The book with the id {bookId} was not found.") { }
     }
 
+    public class BookHasBeenDeletedException : NotFoundException
+    {
+        public BookHasBeenDeletedException(Guid bookId)
+            : base($"The book with the id {bookId} has been deleted.") { }
+    }
+
     public class BookInsertFailedException : NotFoundException
     {
         public BookInsertFailedException(Guid bookId)

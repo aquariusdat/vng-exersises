@@ -48,6 +48,7 @@ internal sealed class ExceptionHandlingMiddleware : IMiddleware
         exception switch
         {
             BadRequestException => StatusCodes.Status400BadRequest,
+            BookException.BookHasBeenDeletedException => StatusCodes.Status400BadRequest,
             NotFoundException => StatusCodes.Status404NotFound,
             //Application.Exceptions.ValidationException => StatusCodes.Status422UnprocessableEntity,
             FluentValidation.ValidationException => StatusCodes.Status400BadRequest,

@@ -4,6 +4,7 @@ using VNG_Exercises.DependencyInjection.Extensions;
 using VNGExercises.Persistence.DependencyInjections.Options;
 using VNGExercises.Persistence.DependencyInjections.Extensions;
 using VNGExercises.Application.DependencyInjection.Extensions;
+using VNG_Exercises.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,8 @@ Log.Logger = new LoggerConfiguration().ReadFrom
                 .CreateLogger();
 builder.Logging.ClearProviders().AddSerilog();
 builder.Host.UseSerilog();
+
+builder.Services.AddTransient<ExceptionHandlingMiddleware>();
 
 // Add services to the container.
 builder.Services.AddControllers().AddApplicationPart(VNGExercises.Presentation.AssemblyReference.Assembly);
@@ -40,6 +43,7 @@ builder.Services.ConfigurePostgreSqlRetryOptions(builder.Configuration.GetSectio
 #endregion
 
 var app = builder.Build();
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

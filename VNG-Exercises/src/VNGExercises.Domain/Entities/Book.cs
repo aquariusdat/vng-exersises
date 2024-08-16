@@ -32,5 +32,19 @@ namespace VNGExercises.Domain.Entities
 
         // Behaviors
         public static Book Create(string Title, string Author, DateTime PublishedAt, Guid CreatedBy) => new(Title, Author, PublishedAt, CreatedBy);
+        public void Update(string Title, string Author, DateTime PublishedAt, Guid UpdatedBy)
+        {
+            this.Title = Title;
+            this.Author = Author;
+            this.PublishedAt = PublishedAt;
+            this.UpdatedBy = UpdatedBy;
+            UpdatedAt = DateTime.Now;
+        }
+        public void Delete(Guid DeletedBy)
+        {
+            this.DeletedBy = DeletedBy;
+            IsDeleted = true;
+            DeletedAt = DateTime.Now;
+        }
     }
 }
