@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+   
+    vngexercisesdb:
+        image: postgres
+        container_name: 'vngexercisesdb'
+        restart: always
+        environment:
+        - POSTGRES_USER=vngexercises
+        - POSTGRES_PASSWORD=vngexercises
+        - POSTGRES_DB=vngexercises
+        ports:
+        - 5555:5432
+        volumes:
+        - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

@@ -7,4 +7,28 @@
     <RootNamespace>VNG_Exercises</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MicroElements.Swashbuckle.FluentValidation" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog" Version="4.0.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.2" />
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VNGExercises.Application\VNGExercises.Application.csproj" />
+    <ProjectReference Include="..\VNGExercises.Contract\VNGExercises.Contract.csproj" />
+    <ProjectReference Include="..\VNGExercises.Domain\VNGExercises.Domain.csproj" />
+    <ProjectReference Include="..\VNGExercises.Infrastructure\VNGExercises.Infrastructure.csproj" />
+    <ProjectReference Include="..\VNGExercises.Persistence\VNGExercises.Persistence.csproj" />
+    <ProjectReference Include="..\VNGExercises.Presentation\VNGExercises.Presentation.csproj" />
+  </ItemGroup>
+
 </Project>

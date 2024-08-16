@@ -7,15 +7,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8F7CD67C-73B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VNGExercises.API", "src\VNG-Exercises\VNGExercises.API.csproj", "{80AA19F2-8B7F-44BB-89DB-3E8DC85D327C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VNGExercises.Application", "src\VNGExercises.Application\VNGExercises.Application.csproj", "{71A46299-4C13-4F37-811D-46C8DD3EC95B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VNGExercises.Application", "src\VNGExercises.Application\VNGExercises.Application.csproj", "{71A46299-4C13-4F37-811D-46C8DD3EC95B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VNGExercises.Domain", "src\VNGExercises.Domain\VNGExercises.Domain.csproj", "{D2737AFA-E1FE-4BD4-B85A-83318880D0A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VNGExercises.Domain", "src\VNGExercises.Domain\VNGExercises.Domain.csproj", "{D2737AFA-E1FE-4BD4-B85A-83318880D0A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VNGExercises.Infrastructure", "src\VNGExercises.Infrastructure\VNGExercises.Infrastructure.csproj", "{6CF90AAC-7D0F-442F-AD31-F0EAC5015943}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VNGExercises.Infrastructure", "src\VNGExercises.Infrastructure\VNGExercises.Infrastructure.csproj", "{6CF90AAC-7D0F-442F-AD31-F0EAC5015943}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VNGExercises.Persistence", "src\VNGExercises.Persistence\VNGExercises.Persistence.csproj", "{94E8FCDD-1319-45BC-9A54-625F2301B783}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VNGExercises.Persistence", "src\VNGExercises.Persistence\VNGExercises.Persistence.csproj", "{94E8FCDD-1319-45BC-9A54-625F2301B783}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VNGExercises.Presentation", "src\VNGExercises.Presentation\VNGExercises.Presentation.csproj", "{96D14712-3488-4CD7-BDAB-0AED0B7321AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VNGExercises.Presentation", "src\VNGExercises.Presentation\VNGExercises.Presentation.csproj", "{96D14712-3488-4CD7-BDAB-0AED0B7321AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VNGExercises.Infrastructure.InMemory", "src\VNGExercises.Infrastructure.InMemory\VNGExercises.Infrastructure.InMemory.csproj", "{46DE3598-1E8E-41BC-915C-3E29192EB8B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{FC56D370-7C8A-4823-85E2-2A9C5E52A18E}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.dev.infrastructure.yml = docker-compose.dev.infrastructure.yml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VNGExercises.Contract", "src\VNGExercises.Contract\VNGExercises.Contract.csproj", "{EAF3F459-8294-4B74-9C13-38D5A5A78547}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +56,14 @@ Global
 		{96D14712-3488-4CD7-BDAB-0AED0B7321AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96D14712-3488-4CD7-BDAB-0AED0B7321AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96D14712-3488-4CD7-BDAB-0AED0B7321AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46DE3598-1E8E-41BC-915C-3E29192EB8B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46DE3598-1E8E-41BC-915C-3E29192EB8B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46DE3598-1E8E-41BC-915C-3E29192EB8B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46DE3598-1E8E-41BC-915C-3E29192EB8B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAF3F459-8294-4B74-9C13-38D5A5A78547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF3F459-8294-4B74-9C13-38D5A5A78547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF3F459-8294-4B74-9C13-38D5A5A78547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF3F459-8294-4B74-9C13-38D5A5A78547}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +75,8 @@ Global
 		{6CF90AAC-7D0F-442F-AD31-F0EAC5015943} = {8F7CD67C-73B3-4AA5-91A3-BA5978F73993}
 		{94E8FCDD-1319-45BC-9A54-625F2301B783} = {8F7CD67C-73B3-4AA5-91A3-BA5978F73993}
 		{96D14712-3488-4CD7-BDAB-0AED0B7321AF} = {8F7CD67C-73B3-4AA5-91A3-BA5978F73993}
+		{46DE3598-1E8E-41BC-915C-3E29192EB8B2} = {8F7CD67C-73B3-4AA5-91A3-BA5978F73993}
+		{EAF3F459-8294-4B74-9C13-38D5A5A78547} = {8F7CD67C-73B3-4AA5-91A3-BA5978F73993}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AAFB671D-6B60-44AF-9EF3-50D46041EDF2}

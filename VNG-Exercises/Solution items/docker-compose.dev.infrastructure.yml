@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+    vngexercisesmq:
+        container_name: 'rabbitmq'
+        image: rabbitmq:3.12-management
+        restart: always
+        environment: 
+            - RABBITMQ_DEFAULT_USERNAME=guest
+            - RABBITMQ_DEFAULT_PASSWORD=guest
+            - RABBITMQ_DEFAULT_VHOST=vngexercisesblog
+        ports:
+        - 5672:5672
+        - 15672:15672 
+
+    vngexercisesdb:
+        image: postgres
+        container_name: 'vngexercisesdb'
+        restart: always
+        environment:
+        - POSTGRES_USER=vngexercises
+        - POSTGRES_PASSWORD=vngexercises
+        - POSTGRES_DB=vngexercises
+        ports:
+        - 5555:5432
+        volumes:
+        - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

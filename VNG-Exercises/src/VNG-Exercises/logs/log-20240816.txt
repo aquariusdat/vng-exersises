@@ -1,0 +1,389 @@
+2024-08-16 20:32:05.007 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The constraint reference 'apiVersion' could not be resolved to a type. Register the constraint type with 'Microsoft.AspNetCore.Routing.RouteOptions.ConstraintMap'.
+   at Microsoft.AspNetCore.Routing.DefaultParameterPolicyFactory.Create(RoutePatternParameterPart parameter, String inlineText)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.CachingParameterPolicyFactory.Create(RoutePatternParameterPart parameter, String inlineText)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.CreateCandidate(Endpoint endpoint, Int32 score)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.CreateCandidates(IReadOnlyList`1 endpoints)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.Build()
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.CreateMatcher(IReadOnlyList`1 endpoints)
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-16 20:32:05.623 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The constraint reference 'apiVersion' could not be resolved to a type. Register the constraint type with 'Microsoft.AspNetCore.Routing.RouteOptions.ConstraintMap'.
+   at Microsoft.AspNetCore.Routing.DefaultParameterPolicyFactory.Create(RoutePatternParameterPart parameter, String inlineText)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.CachingParameterPolicyFactory.Create(RoutePatternParameterPart parameter, String inlineText)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.CreateCandidate(Endpoint endpoint, Int32 score)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.CreateCandidates(IReadOnlyList`1 endpoints)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.AddNode(DfaNode node, DfaState[] states, Int32 exitDestination)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherBuilder.Build()
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.CreateMatcher(IReadOnlyList`1 endpoints)
+   at Microsoft.AspNetCore.Routing.DataSourceDependentCache`1.Initialize()
+   at System.Threading.LazyInitializer.EnsureInitializedCore[T](T& target, Boolean& initialized, Object& syncLock, Func`1 valueFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher..ctor(EndpointDataSource dataSource, Lifetime lifetime, Func`1 matcherBuilderFactory)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcherFactory.CreateMatcher(EndpointDataSource dataSource)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.InitializeCoreAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|10_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-16 20:44:42.636 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-16 20:51:17.073 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'MediatR.ISender' while attempting to activate 'VNGExercises.Presentation.Controllers.V1.BookController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-16 20:52:11.658 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'MediatR.ISender' while attempting to activate 'VNGExercises.Presentation.Controllers.V1.BookController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-16 21:50:27.040 +07:00 [ERR] Failed executing DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Book" (
+    "Id" uuid NOT NULL,
+    "Title" character varying(100) NOT NULL,
+    "Author" text NOT NULL,
+    "PublishedAt" timestamp without time zone NOT NULL,
+    "CreatedBy" uuid NOT NULL DEFAULT (now()),
+    "UpdatedBy" uuid,
+    "DeletedBy" uuid,
+    "CreatedAt" timestamp without time zone NOT NULL,
+    "UpdatedAt" timestamp without time zone,
+    "DeletedAt" timestamp without time zone,
+    "IsDeleted" boolean NOT NULL DEFAULT FALSE,
+    CONSTRAINT "PK_Book" PRIMARY KEY ("Id")
+);
+2024-08-16 22:05:18.556 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'MediatR.ISender' while attempting to activate 'VNGExercises.Presentation.Controllers.V1.BookController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-16 22:11:42.140 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'MediatR.ISender' while attempting to activate 'VNGExercises.Presentation.Controllers.V1.BookController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-16 22:25:30.996 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Parent does not have a default constructor. The default constructor must be explicitly defined.
+   at System.Reflection.Emit.RuntimeTypeBuilder.DefineDefaultConstructorNoLock(MethodAttributes attributes)
+   at System.Reflection.Emit.RuntimeTypeBuilder.DefineDefaultConstructorCore(MethodAttributes attributes)
+   at System.Reflection.Emit.RuntimeTypeBuilder.CreateTypeNoLock()
+   at System.Reflection.Emit.RuntimeTypeBuilder.CreateTypeInfoImpl()
+   at System.Reflection.Emit.TypeBuilder.CreateTypeInfo()
+   at Castle.DynamicProxy.Generators.Emitters.AbstractTypeEmitter.CreateType(TypeBuilder type)
+   at Castle.DynamicProxy.Generators.Emitters.AbstractTypeEmitter.BuildType()
+   at Castle.DynamicProxy.Generators.BaseClassProxyGenerator.GenerateType(String name, INamingScope namingScope)
+   at Castle.DynamicProxy.Generators.BaseProxyGenerator.<>c__DisplayClass13_0.<GetProxyType>b__0(CacheKey cacheKey)
+   at Castle.Core.Internal.SynchronizedDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Castle.DynamicProxy.Generators.BaseProxyGenerator.GetProxyType()
+   at Castle.DynamicProxy.DefaultProxyBuilder.CreateClassProxyType(Type classToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyFactory.CreateProxyType(IEntityType entityType)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyBindingInterceptor.ModifyBinding(InstantiationBindingInterceptionData interceptionData, InstantiationBinding binding)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityMaterializerSource.ModifyBindings(ITypeBase structuralType, InstantiationBinding binding)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityMaterializerSource.CreateMaterializeExpression(EntityMaterializerSourceParameters parameters, Expression materializationContextExpression)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.EntityMaterializerInjectingExpressionVisitor.CreateFullMaterializeExpression(ITypeBase concreteTypeBase, ValueTuple`4 materializeExpressionContext)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.EntityMaterializerInjectingExpressionVisitor.MaterializeEntity(StructuralTypeShaperExpression shaper, ParameterExpression materializationContextVariable, ParameterExpression concreteEntityTypeVariable, ParameterExpression instanceVariable, ParameterExpression entryVariable)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.EntityMaterializerInjectingExpressionVisitor.ProcessEntityShaper(StructuralTypeShaperExpression shaper)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.EntityMaterializerInjectingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.EntityMaterializerInjectingExpressionVisitor.Inject(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.InjectEntityMaterializers(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.ProcessShaper(Expression shaperExpression, RelationalCommandCache& relationalCommandCache, IReadOnlyList`1& readerColumns, LambdaExpression& relatedDataLoaders, Int32& collectionId)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.VisitShapedQuery(ShapedQueryExpression shapedQueryExpression)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at VNGExercises.Contract.Abstractions.Shared.PagedResult`1.CreateAsync(IQueryable`1 query, Int32 pageIndex, Int32 pageSize) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Contract\Abstractions\Shared\PagedResult.cs:line 35
+   at VNGExercises.Application.Usecases.V1.Query.Book.GetBookQueryHandler.Handle(GetBookQuery request, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Usecases\V1\Query\Book\GetBookQueryHandler.cs:line 30
+   at VNGExercises.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\TransactionPipelineBehavior.cs:line 25
+   at VNGExercises.Application.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\ValidationPipelineBehavior.cs:line 23
+   at VNGExercises.Application.Behaviors.PerformancePiplineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\PerformancePiplineBehavior.cs:line 19
+   at VNGExercises.Application.Behaviors.LoggingPiplineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\LoggingPiplineBehavior.cs:line 19
+   at VNGExercises.Presentation.Controllers.V1.BookController.Books(String searchTerm, Int32 pageIndex, Int32 pageSize) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Presentation\Controllers\V1\BookController.cs:line 24
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-16 22:26:02.821 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Parent does not have a default constructor. The default constructor must be explicitly defined.
+   at System.Reflection.Emit.RuntimeTypeBuilder.DefineDefaultConstructorNoLock(MethodAttributes attributes)
+   at System.Reflection.Emit.RuntimeTypeBuilder.DefineDefaultConstructorCore(MethodAttributes attributes)
+   at System.Reflection.Emit.RuntimeTypeBuilder.CreateTypeNoLock()
+   at System.Reflection.Emit.RuntimeTypeBuilder.CreateTypeInfoImpl()
+   at System.Reflection.Emit.TypeBuilder.CreateTypeInfo()
+   at Castle.DynamicProxy.Generators.Emitters.AbstractTypeEmitter.CreateType(TypeBuilder type)
+   at Castle.DynamicProxy.Generators.Emitters.AbstractTypeEmitter.BuildType()
+   at Castle.DynamicProxy.Generators.BaseClassProxyGenerator.GenerateType(String name, INamingScope namingScope)
+   at Castle.DynamicProxy.Generators.BaseProxyGenerator.<>c__DisplayClass13_0.<GetProxyType>b__0(CacheKey cacheKey)
+   at Castle.Core.Internal.SynchronizedDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Castle.DynamicProxy.Generators.BaseProxyGenerator.GetProxyType()
+   at Castle.DynamicProxy.DefaultProxyBuilder.CreateClassProxyType(Type classToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyFactory.CreateProxyType(IEntityType entityType)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyBindingInterceptor.ModifyBinding(InstantiationBindingInterceptionData interceptionData, InstantiationBinding binding)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityMaterializerSource.ModifyBindings(ITypeBase structuralType, InstantiationBinding binding)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityMaterializerSource.CreateMaterializeExpression(EntityMaterializerSourceParameters parameters, Expression materializationContextExpression)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.EntityMaterializerInjectingExpressionVisitor.CreateFullMaterializeExpression(ITypeBase concreteTypeBase, ValueTuple`4 materializeExpressionContext)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.EntityMaterializerInjectingExpressionVisitor.MaterializeEntity(StructuralTypeShaperExpression shaper, ParameterExpression materializationContextVariable, ParameterExpression concreteEntityTypeVariable, ParameterExpression instanceVariable, ParameterExpression entryVariable)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.EntityMaterializerInjectingExpressionVisitor.ProcessEntityShaper(StructuralTypeShaperExpression shaper)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.EntityMaterializerInjectingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.EntityMaterializerInjectingExpressionVisitor.Inject(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.InjectEntityMaterializers(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.ProcessShaper(Expression shaperExpression, RelationalCommandCache& relationalCommandCache, IReadOnlyList`1& readerColumns, LambdaExpression& relatedDataLoaders, Int32& collectionId)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.VisitShapedQuery(ShapedQueryExpression shapedQueryExpression)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at VNGExercises.Contract.Abstractions.Shared.PagedResult`1.CreateAsync(IQueryable`1 query, Int32 pageIndex, Int32 pageSize) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Contract\Abstractions\Shared\PagedResult.cs:line 35
+   at VNGExercises.Application.Usecases.V1.Query.Book.GetBookQueryHandler.Handle(GetBookQuery request, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Usecases\V1\Query\Book\GetBookQueryHandler.cs:line 30
+   at VNGExercises.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\TransactionPipelineBehavior.cs:line 25
+   at VNGExercises.Application.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\ValidationPipelineBehavior.cs:line 23
+   at VNGExercises.Application.Behaviors.PerformancePiplineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\PerformancePiplineBehavior.cs:line 19
+   at VNGExercises.Application.Behaviors.LoggingPiplineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\LoggingPiplineBehavior.cs:line 19
+   at VNGExercises.Presentation.Controllers.V1.BookController.Books(String searchTerm, Int32 pageIndex, Int32 pageSize) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Presentation\Controllers\V1\BookController.cs:line 24
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-16 22:26:38.183 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Parent does not have a default constructor. The default constructor must be explicitly defined.
+   at System.Reflection.Emit.RuntimeTypeBuilder.DefineDefaultConstructorNoLock(MethodAttributes attributes)
+   at System.Reflection.Emit.RuntimeTypeBuilder.DefineDefaultConstructorCore(MethodAttributes attributes)
+   at System.Reflection.Emit.RuntimeTypeBuilder.CreateTypeNoLock()
+   at System.Reflection.Emit.RuntimeTypeBuilder.CreateTypeInfoImpl()
+   at System.Reflection.Emit.TypeBuilder.CreateTypeInfo()
+   at Castle.DynamicProxy.Generators.Emitters.AbstractTypeEmitter.CreateType(TypeBuilder type)
+   at Castle.DynamicProxy.Generators.Emitters.AbstractTypeEmitter.BuildType()
+   at Castle.DynamicProxy.Generators.BaseClassProxyGenerator.GenerateType(String name, INamingScope namingScope)
+   at Castle.DynamicProxy.Generators.BaseProxyGenerator.<>c__DisplayClass13_0.<GetProxyType>b__0(CacheKey cacheKey)
+   at Castle.Core.Internal.SynchronizedDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Castle.DynamicProxy.Generators.BaseProxyGenerator.GetProxyType()
+   at Castle.DynamicProxy.DefaultProxyBuilder.CreateClassProxyType(Type classToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyFactory.CreateProxyType(IEntityType entityType)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyBindingInterceptor.ModifyBinding(InstantiationBindingInterceptionData interceptionData, InstantiationBinding binding)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityMaterializerSource.ModifyBindings(ITypeBase structuralType, InstantiationBinding binding)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityMaterializerSource.CreateMaterializeExpression(EntityMaterializerSourceParameters parameters, Expression materializationContextExpression)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.EntityMaterializerInjectingExpressionVisitor.CreateFullMaterializeExpression(ITypeBase concreteTypeBase, ValueTuple`4 materializeExpressionContext)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.EntityMaterializerInjectingExpressionVisitor.MaterializeEntity(StructuralTypeShaperExpression shaper, ParameterExpression materializationContextVariable, ParameterExpression concreteEntityTypeVariable, ParameterExpression instanceVariable, ParameterExpression entryVariable)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.EntityMaterializerInjectingExpressionVisitor.ProcessEntityShaper(StructuralTypeShaperExpression shaper)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.EntityMaterializerInjectingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.EntityMaterializerInjectingExpressionVisitor.Inject(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.InjectEntityMaterializers(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.ProcessShaper(Expression shaperExpression, RelationalCommandCache& relationalCommandCache, IReadOnlyList`1& readerColumns, LambdaExpression& relatedDataLoaders, Int32& collectionId)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.VisitShapedQuery(ShapedQueryExpression shapedQueryExpression)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at VNGExercises.Contract.Abstractions.Shared.PagedResult`1.CreateAsync(IQueryable`1 query, Int32 pageIndex, Int32 pageSize) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Contract\Abstractions\Shared\PagedResult.cs:line 35
+   at VNGExercises.Application.Usecases.V1.Query.Book.GetBookQueryHandler.Handle(GetBookQuery request, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Usecases\V1\Query\Book\GetBookQueryHandler.cs:line 30
+   at VNGExercises.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\TransactionPipelineBehavior.cs:line 25
+   at VNGExercises.Application.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\ValidationPipelineBehavior.cs:line 23
+   at VNGExercises.Application.Behaviors.PerformancePiplineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\PerformancePiplineBehavior.cs:line 19
+   at VNGExercises.Application.Behaviors.LoggingPiplineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\LoggingPiplineBehavior.cs:line 19
+   at VNGExercises.Presentation.Controllers.V1.BookController.Books(String searchTerm, Int32 pageIndex, Int32 pageSize) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Presentation\Controllers\V1\BookController.cs:line 24
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-16 22:27:01.435 +07:00 [ERR] An exception occurred while iterating over the results of a query for context type 'VNGExercises.Persistence.ApplicationDbContext'.
+System.ArgumentException: Can not instantiate proxy of class: VNGExercises.Domain.Entities.Book.
+Could not find a constructor that would match given arguments:
+System.String
+System.String
+System.DateTime
+System.Guid
+ (Parameter 'constructorArguments')
+ ---> System.MissingMethodException: Constructor on type 'Castle.Proxies.BookProxy_3' not found.
+   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxyInstance(Type proxyType, List`1 proxyArguments, Type classToProxy, Object[] constructorArguments)
+   --- End of inner exception stack trace ---
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxyInstance(Type proxyType, List`1 proxyArguments, Type classToProxy, Object[] constructorArguments)
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxy(Type classToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, Object[] constructorArguments, IInterceptor[] interceptors)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyFactory.CreateLazyLoadingProxy(IEntityType entityType, ILazyLoader loader, Object[] constructorArguments)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyFactory.CreateLazyLoadingProxy(DbContext context, IEntityType entityType, ILazyLoader loader, Object[] constructorArguments)
+   at lambda_method61(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.ArgumentException: Can not instantiate proxy of class: VNGExercises.Domain.Entities.Book.
+Could not find a constructor that would match given arguments:
+System.String
+System.String
+System.DateTime
+System.Guid
+ (Parameter 'constructorArguments')
+ ---> System.MissingMethodException: Constructor on type 'Castle.Proxies.BookProxy_3' not found.
+   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxyInstance(Type proxyType, List`1 proxyArguments, Type classToProxy, Object[] constructorArguments)
+   --- End of inner exception stack trace ---
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxyInstance(Type proxyType, List`1 proxyArguments, Type classToProxy, Object[] constructorArguments)
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxy(Type classToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, Object[] constructorArguments, IInterceptor[] interceptors)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyFactory.CreateLazyLoadingProxy(IEntityType entityType, ILazyLoader loader, Object[] constructorArguments)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyFactory.CreateLazyLoadingProxy(DbContext context, IEntityType entityType, ILazyLoader loader, Object[] constructorArguments)
+   at lambda_method61(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2024-08-16 22:27:01.557 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Can not instantiate proxy of class: VNGExercises.Domain.Entities.Book.
+Could not find a constructor that would match given arguments:
+System.String
+System.String
+System.DateTime
+System.Guid
+ (Parameter 'constructorArguments')
+ ---> System.MissingMethodException: Constructor on type 'Castle.Proxies.BookProxy_3' not found.
+   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxyInstance(Type proxyType, List`1 proxyArguments, Type classToProxy, Object[] constructorArguments)
+   --- End of inner exception stack trace ---
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxyInstance(Type proxyType, List`1 proxyArguments, Type classToProxy, Object[] constructorArguments)
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxy(Type classToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, Object[] constructorArguments, IInterceptor[] interceptors)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyFactory.CreateLazyLoadingProxy(IEntityType entityType, ILazyLoader loader, Object[] constructorArguments)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyFactory.CreateLazyLoadingProxy(DbContext context, IEntityType entityType, ILazyLoader loader, Object[] constructorArguments)
+   at lambda_method61(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at VNGExercises.Contract.Abstractions.Shared.PagedResult`1.CreateAsync(IQueryable`1 query, Int32 pageIndex, Int32 pageSize) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Contract\Abstractions\Shared\PagedResult.cs:line 35
+   at VNGExercises.Application.Usecases.V1.Query.Book.GetBookQueryHandler.Handle(GetBookQuery request, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Usecases\V1\Query\Book\GetBookQueryHandler.cs:line 30
+   at VNGExercises.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\TransactionPipelineBehavior.cs:line 25
+   at VNGExercises.Application.Behaviors.ValidationPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\ValidationPipelineBehavior.cs:line 23
+   at VNGExercises.Application.Behaviors.PerformancePiplineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\PerformancePiplineBehavior.cs:line 19
+   at VNGExercises.Application.Behaviors.LoggingPiplineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Application\Behaviors\LoggingPiplineBehavior.cs:line 19
+   at VNGExercises.Presentation.Controllers.V1.BookController.Books(String searchTerm, Int32 pageIndex, Int32 pageSize) in D:\DevPrograms\Gits\vng-exersises\VNG-Exercises\src\VNGExercises.Presentation\Controllers\V1\BookController.cs:line 24
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)

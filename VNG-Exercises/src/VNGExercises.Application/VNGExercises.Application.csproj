@@ -1,9 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\VNGExercises.Contract\VNGExercises.Contract.csproj" />
+		<ProjectReference Include="..\VNGExercises.Domain\VNGExercises.Domain.csproj" />
+		<ProjectReference Include="..\VNGExercises.Persistence\VNGExercises.Persistence.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="DependencyInjection\Options\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="AutoMapper" Version="13.0.1" />
+	  <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2" />
+	</ItemGroup>
 
 </Project>
