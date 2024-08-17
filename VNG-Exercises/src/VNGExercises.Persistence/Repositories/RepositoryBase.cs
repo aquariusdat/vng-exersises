@@ -4,7 +4,7 @@ using VNGExercises.Domain.Abstractions.Repositories;
 using Microsoft.EntityFrameworkCore;
 using VNGExercises.Persistence;
 
-namespace AnyCodeBlog.Persistence.Repositories;
+namespace VNGExercises.Persistence.Repositories;
 public class RepositoryBase<TEntity, TKey> : IRepositoryBase<TEntity, TKey>, IDisposable
     where TEntity : DomainEntity<TKey>
 {

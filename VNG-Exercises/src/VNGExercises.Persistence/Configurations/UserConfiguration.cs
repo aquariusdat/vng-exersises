@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using VNGExercises.Persistence.Constants;
-using VNGExercises.Infrastructure.InMemory;
+using VNGExercises.Infrastructure.InMemory.Repositories;
 
 namespace VNGExercises.Persistence.Configurations;
 

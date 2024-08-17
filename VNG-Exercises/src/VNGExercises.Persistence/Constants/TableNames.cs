@@ -8,4 +8,6 @@ internal static class TableNames
     internal const string Book = nameof(Book);
     internal const string Follower = nameof(Follower);
     internal const string Post = nameof(Post);
+
+    internal const string OutboxMessages = nameof(OutboxMessages);
 }

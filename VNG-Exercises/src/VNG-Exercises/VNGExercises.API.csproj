@@ -26,6 +26,7 @@
 		<ProjectReference Include="..\VNGExercises.Application\VNGExercises.Application.csproj" />
 		<ProjectReference Include="..\VNGExercises.Contract\VNGExercises.Contract.csproj" />
 		<ProjectReference Include="..\VNGExercises.Domain\VNGExercises.Domain.csproj" />
+		<ProjectReference Include="..\VNGExercises.Infrastructure.InMemory\VNGExercises.Infrastructure.InMemory.csproj" />
 		<ProjectReference Include="..\VNGExercises.Infrastructure\VNGExercises.Infrastructure.csproj" />
 		<ProjectReference Include="..\VNGExercises.Persistence\VNGExercises.Persistence.csproj" />
 		<ProjectReference Include="..\VNGExercises.Presentation\VNGExercises.Presentation.csproj" />

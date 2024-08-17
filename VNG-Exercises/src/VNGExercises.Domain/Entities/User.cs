@@ -10,7 +10,6 @@ namespace VNGExercises.Domain.Entities
         public string Email { get; set; }
         public string Status { get; set; }
         public DateTime? LastUpdatedPwd { get; set; }
-        public bool IsRequiredUpdatedPwd { get; set; }
 
         public Guid CreatedBy { get; set; }
         public Guid? UpdatedBy { get; set; }

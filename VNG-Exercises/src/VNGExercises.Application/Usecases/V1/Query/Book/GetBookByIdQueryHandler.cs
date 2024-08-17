@@ -1,10 +1,4 @@
 ﻿using AutoMapper;
-using MassTransit.Licensing;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VNGExercises.Contract.Abstractions.Message;
 using VNGExercises.Contract.Abstractions.Shared;
 using VNGExercises.Contract.Services.V1.Book;

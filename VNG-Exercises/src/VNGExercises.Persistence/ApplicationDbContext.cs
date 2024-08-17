@@ -1,6 +1,7 @@
 ﻿using VNGExercises.Domain.Entities;
 using VNGExercises.Persistence.Configurations;
 using Microsoft.EntityFrameworkCore;
+using VNGExercises.Persistence.Outbox;
 
 namespace VNGExercises.Persistence;
 public sealed class ApplicationDbContext : DbContext
@@ -17,4 +18,5 @@ public sealed class ApplicationDbContext : DbContext
     public DbSet<Post> Posts { get; set; }
     public DbSet<Book> Books { get; set; }
     public DbSet<Follower> Followers { get; set; }
+    public DbSet<OutboxMessage> OutboxMessages { get; set; }
 }

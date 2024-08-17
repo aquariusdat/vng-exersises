@@ -11,4 +11,8 @@
     <ProjectReference Include="..\VNGExercises.Domain\VNGExercises.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DependencyInjection\Options\" />
+  </ItemGroup>
+
 </Project>

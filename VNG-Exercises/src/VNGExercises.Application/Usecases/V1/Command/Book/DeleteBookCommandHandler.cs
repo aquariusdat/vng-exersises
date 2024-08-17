@@ -1,10 +1,4 @@
 ﻿using AutoMapper;
-using MassTransit.Licensing;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VNGExercises.Contract.Abstractions.Message;
 using VNGExercises.Contract.Abstractions.Shared;
 using VNGExercises.Domain.Abstractions.Repositories;
@@ -15,11 +9,9 @@ namespace VNGExercises.Application.Usecases.V1.Command.Book
     public class DeleteBookCommandHandler : ICommandHandler<Contract.Services.V1.Book.Command.DeleteBookCommand, bool>
     {
         private readonly IRepositoryBase<Domain.Entities.Book, Guid> _bookRepository;
-        private readonly IMapper _mapper;
-        public DeleteBookCommandHandler(IRepositoryBase<Domain.Entities.Book, Guid> bookRepository, IMapper mapper)
+        public DeleteBookCommandHandler(IRepositoryBase<Domain.Entities.Book, Guid> bookRepository)
         {
             _bookRepository = bookRepository;
-            _mapper = mapper;
         }
 
         public async Task<Result<bool>> Handle(Contract.Services.V1.Book.Command.DeleteBookCommand request, CancellationToken cancellationToken)

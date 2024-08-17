@@ -6,6 +6,8 @@ using VNGExercises.Persistence.DependencyInjections.Extensions;
 using VNGExercises.Application.DependencyInjection.Extensions;
 using VNGExercises.Middlewares;
 using VNGExercises.Infrastructure.DependencyInjection.Extensions;
+using VNGExercises.Infrastructure.InMemory.DependencyInjection.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // SeriLog configurations
@@ -39,6 +41,8 @@ builder.Services
 
 #region Infrastructure 
 builder.Services.AddPostgreSql();
+builder.Services.AddInMemoryRepositoryInfrastructure();
+
 builder.Services.ConfigurePostgreSqlRetryOptions(builder.Configuration.GetSection(nameof(PostgreSqlRetryOptions)));
 
 builder.Services.AddBackgroundJobInfrastructure(builder.Configuration);
@@ -52,7 +56,12 @@ app.UseMiddleware<ExceptionHandlingMiddleware>();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+        c.SwaggerEndpoint("/swagger/v2/swagger.json", "v2");
+    });
+    //app.ConfigureSwagger();
 }
 
 app.UseAuthorization();

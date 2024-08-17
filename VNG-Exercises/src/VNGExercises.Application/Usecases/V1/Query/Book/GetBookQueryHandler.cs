@@ -1,12 +1,8 @@
 ﻿using AutoMapper;
-using Microsoft.Extensions.Logging;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using System.Linq.Expressions;
 using VNGExercises.Contract.Abstractions.Message;
 using VNGExercises.Contract.Abstractions.Shared;
 using VNGExercises.Contract.Services.V1.Book;
 using VNGExercises.Domain.Abstractions.Repositories;
-using VNGExercises.Persistence;
 
 namespace VNGExercises.Application.Usecases.V1.Query.Book
 {

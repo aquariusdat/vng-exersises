@@ -26,23 +26,23 @@ namespace VNGExercises.Infrastructure.DependencyInjection.Extensions
         {
             services.AddQuartz(config =>
             {
-                var sendMailToUserRequiredToUpdatePasswordJobKey = new JobKey(nameof(SendEmailToUserRequiredToUpdatePasswordJob));
+                var sendMailToUserRequiredToUpdatePasswordJobKey = new JobKey(nameof(ConvertUserRequiredUpdatedPwdToOutboxMessages));
 
-                config.AddJob<SendEmailToUserRequiredToUpdatePasswordJob>(sendMailToUserRequiredToUpdatePasswordJobKey)
+                config.AddJob<ConvertUserRequiredUpdatedPwdToOutboxMessages>(sendMailToUserRequiredToUpdatePasswordJobKey)
                 .AddTrigger(trigger =>
                             trigger.ForJob(sendMailToUserRequiredToUpdatePasswordJobKey)
                                     .WithSimpleSchedule(schedule =>
-                                                        schedule.WithInterval(TimeSpan.FromSeconds(100))
+                                                        schedule.WithInterval(TimeSpan.FromMicroseconds(100))
                                                         .RepeatForever()));
 
 
-                var checkIfUserNeedsToUpdateThePasswordJobKey = new JobKey(nameof(CheckIfUserNeedsToUpdateThePasswordJob));
+                var checkIfUserNeedsToUpdateThePasswordJobKey = new JobKey(nameof(SendEmailToUserRequiredToUpdatePasswordJob));
 
-                config.AddJob<CheckIfUserNeedsToUpdateThePasswordJob>(checkIfUserNeedsToUpdateThePasswordJobKey)
+                config.AddJob<SendEmailToUserRequiredToUpdatePasswordJob>(checkIfUserNeedsToUpdateThePasswordJobKey)
                 .AddTrigger(trigger =>
                             trigger.ForJob(checkIfUserNeedsToUpdateThePasswordJobKey)
                                     .WithSimpleSchedule(schedule =>
-                                                        schedule.WithInterval(TimeSpan.FromMicroseconds(100))
+                                                        schedule.WithInterval(TimeSpan.FromSeconds(10))
                                                         .RepeatForever()));
 
                 config.UseMicrosoftDependencyInjectionJobFactory();

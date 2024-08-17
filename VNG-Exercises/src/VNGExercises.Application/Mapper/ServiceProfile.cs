@@ -12,6 +12,10 @@ public class ServiceProfile : Profile
         CreateMap<Book, Contract.Services.V1.Book.Response.BookResponse>().ReverseMap();
         CreateMap<PagedResult<Book>, PagedResult<Contract.Services.V1.Book.Response.BookResponse>>().ReverseMap();
 
+        // V2
+        CreateMap<Book, Contract.Services.V2.Book.Response.BookResponse>().ReverseMap();
+        CreateMap<PagedResult<Book>, PagedResult<Contract.Services.V2.Book.Response.BookResponse>>().ReverseMap();
+
         //CreateMap<Post, Contract.Services.V1.Post.Response.PostResponse>().ReverseMap();
         //CreateMap<Result<List<Post>>, Result<List<Contract.Services.V1.Post.Response.PostResponse>>>().ReverseMap();
     }

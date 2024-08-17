@@ -6,10 +6,11 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using VNGExercises.Domain.Entities;
+using VNGExercises.Infrastructure.InMemory.Abstractions;
 
-namespace VNGExercises.Infrastructure.InMemory
+namespace VNGExercises.Infrastructure.InMemory.Repositories
 {
-    public class InMemoryUserRepository
+    public class InMemoryUserRepository : IInMemoryUserRepository
     {
         private List<User> _users;
 

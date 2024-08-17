@@ -1,18 +1,9 @@
-﻿using MassTransit;
-using MediatR;
-using VNGExercises.Contract.Abstractions.Shared;
-
-namespace VNGExercises.Contract.Abstractions.Message;
-[ExcludeFromTopology]
-public interface IDomainEvent : IRequest /*IMessage*/ /*INotification*/
+﻿namespace VNGExercises.Contract.Abstractions.Message
 {
-    public Guid EventId { get; init; }
-    public Guid Id { get; set; }
+    public interface IDomainEvent
+    {
+        public Guid EventId { get; set; }
+        public Guid Id { get; set; } // Id of entity
+        public DateTime TimeStamp { get; set; }
+    }
 }
-[ExcludeFromTopology]
-public interface IDomainEvent<TResponse> : IRequest<Result<TResponse>>
-{
-    public Guid EventId { get; init; }
-    public Guid Id { get; set; }
-}
-

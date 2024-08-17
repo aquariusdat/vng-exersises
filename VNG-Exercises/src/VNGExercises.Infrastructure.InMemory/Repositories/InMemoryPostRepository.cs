@@ -1,8 +1,9 @@
 ﻿using VNGExercises.Domain.Entities;
+using VNGExercises.Infrastructure.InMemory.Abstractions;
 
-namespace VNGExercises.Infrastructure.InMemory
+namespace VNGExercises.Infrastructure.InMemory.Repositories
 {
-    public class InMemoryPostRepository
+    public class InMemoryPostRepository : IInMemoryPostRepository
     {
         private List<Post> _posts;
 
