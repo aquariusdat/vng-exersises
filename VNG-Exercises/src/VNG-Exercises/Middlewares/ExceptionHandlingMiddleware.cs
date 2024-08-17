@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using static VNGExercises.Domain.Exceptions.IdentityException;
 
-namespace VNG_Exercises.Middlewares;
+namespace VNGExercises.Middlewares;
 
 internal sealed class ExceptionHandlingMiddleware : IMiddleware
 {

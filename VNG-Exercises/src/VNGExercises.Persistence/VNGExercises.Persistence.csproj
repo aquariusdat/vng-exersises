@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VNGExercises.Domain\VNGExercises.Domain.csproj" />
+    <ProjectReference Include="..\VNGExercises.Infrastructure.InMemory\VNGExercises.Infrastructure.InMemory.csproj" />
   </ItemGroup>
 
 </Project>

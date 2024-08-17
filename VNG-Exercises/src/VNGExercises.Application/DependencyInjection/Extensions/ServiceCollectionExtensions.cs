@@ -17,7 +17,6 @@ namespace VNGExercises.Application.DependencyInjection.Extensions
                 cfg.RegisterServicesFromAssemblies(AssemblyReference.Assembly);
             });
 
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingPiplineBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PerformancePiplineBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(TransactionPipelineBehavior<,>));

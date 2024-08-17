@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VNGExercises.Contract\VNGExercises.Contract.csproj" />
+    <ProjectReference Include="..\VNGExercises.Domain\VNGExercises.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -4,8 +4,8 @@ using VNG_Exercises.DependencyInjection.Extensions;
 using VNGExercises.Persistence.DependencyInjections.Options;
 using VNGExercises.Persistence.DependencyInjections.Extensions;
 using VNGExercises.Application.DependencyInjection.Extensions;
-using VNG_Exercises.Middlewares;
-
+using VNGExercises.Middlewares;
+using VNGExercises.Infrastructure.DependencyInjection.Extensions;
 var builder = WebApplication.CreateBuilder(args);
 
 // SeriLog configurations
@@ -40,6 +40,9 @@ builder.Services
 #region Infrastructure 
 builder.Services.AddPostgreSql();
 builder.Services.ConfigurePostgreSqlRetryOptions(builder.Configuration.GetSection(nameof(PostgreSqlRetryOptions)));
+
+builder.Services.AddBackgroundJobInfrastructure(builder.Configuration);
+builder.Services.AddQuartzInfrastructure();
 #endregion
 
 var app = builder.Build();

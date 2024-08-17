@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using VNGExercises.Persistence.Constants;
+using VNGExercises.Infrastructure.InMemory;
 
 namespace VNGExercises.Persistence.Configurations;
 public class BookConfiguration : IEntityTypeConfiguration<Book>
@@ -18,5 +19,9 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
         builder.Property(x => x.IsDeleted).HasDefaultValue(false);
         builder.Property(x => x.Title).HasMaxLength(100).IsRequired();
         builder.Property(x => x.PublishedAt).IsRequired();
+
+
+        InMemoryBookRepository bookRepository = new InMemoryBookRepository();
+        builder.HasData(bookRepository.FindAll());
     }
 }

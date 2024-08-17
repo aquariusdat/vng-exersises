@@ -7,8 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.7.1.1" />
+    <PackageReference Include="MimeKit" Version="4.7.1" />
     <PackageReference Include="Quartz" Version="3.13.0" />
     <PackageReference Include="Quartz.Extensions.Hosting" Version="3.13.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VNGExercises.Contract\VNGExercises.Contract.csproj" />
+    <ProjectReference Include="..\VNGExercises.Persistence\VNGExercises.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
