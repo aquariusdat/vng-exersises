@@ -1,6 +1,7 @@
 ﻿using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using Microsoft.EntityFrameworkCore.ValueGeneration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Quartz;
@@ -39,11 +40,14 @@ namespace VNGExercises.Infrastructure.BackgroundJobs
                                                                     (
                                                                         DateTime.Now - (t.LastUpdatedPwd.HasValue ? t.LastUpdatedPwd.Value : t.CreatedAt)
                                                                     ).TotalDays >= _sendEmailOptions.NumberOfDaysToRequireUsersToChangePwd
+                                                                    && t.Status != "REQUIRE_CHANGE_PWD"
                                                          )
                                                         .Take(20)
                                                         .ToListAsync();
 
                 if (userHasBeenNotUpdatedPwd.Count == 0) return;
+
+                userHasBeenNotUpdatedPwd.ForEach(t => t.Status = "REQUIRE_CHANGE_PWD");
 
                 var outboxMessages = userHasBeenNotUpdatedPwd
                                .Select(t => new UserRequiredPwdEvent()
