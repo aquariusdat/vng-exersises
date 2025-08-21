@@ -22,3 +22,10 @@ Exercise 1: I created two background jobs when running the project. The first ba
 Exercise 2: I created a RESTful API using .NET 8 to manage a list of books. And API ver 1 I store data on the database. The API ver 2 I store data on in-memory. Then, I created a middleware to validate the header "xAuth" like exercise 2 describes.
 
 Exercise 3: I haven't done it yet.
+
+
+
+
+
+
+haha
